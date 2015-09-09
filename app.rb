@@ -49,7 +49,8 @@ class Membership < Sinatra::Base
   #UPDATE
   post '/members/:id' do
     @member = Member.find(params[:id]) 
-    @member.update(params)
+    newdata = {name: params[:name], email: params[:email], expiry: params[:expiry]}
+    @member.update(newdata)
       redirect to "/members/#{@member.id}"    
   end
 
