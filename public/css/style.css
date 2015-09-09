@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:700italic,700,400italic,400);
+
+body {
+  background: lightcoral;
+  font-family: 'Droid Serif', serif;
+}
+a {
+  color: black;
+}
+
+header {
+  width: 100%;
+  background: black;
+}
+
+header nav { 
+  max-width: 960px;
+  margin: 0 auto;
+  height: 60px;
+  line-height: 60px;
+}
+
+header nav ul {
+  height: 60px;
+  line-height: 60px;
+}
