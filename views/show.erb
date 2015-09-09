@@ -1,3 +1,6 @@
 <h2><%= @member.name %></h2>
 <h4><a href="mailto:<%= @member.email %>?Subject=Your%20Membership"><%= @member.email %></a></h4>
 <h3>Membership Expires: <%= @member.expiry %></h3>
+
+<form action="/members/<%= @member.id %>/delete" method="post">
+<button>Delete Member</button>

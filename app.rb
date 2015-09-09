@@ -56,9 +56,13 @@ class Membership < Sinatra::Base
   end
 
   #DELETE
-  delete '/members/:id/delete' do
+  post '/members/:id/delete' do
     @member = Member.find(params[:id])
-    @member.destroy # :'(
+    if @member.destroy # :'(
+      redirect to '/members'
+    else
+      redirect to "/members/#{@member.id}"
+    end
   end
 
 end
