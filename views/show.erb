@@ -2,5 +2,10 @@
 <h4><a href="mailto:<%= @member.email %>?Subject=Your%20Membership"><%= @member.email %></a></h4>
 <h3>Membership Expires: <%= @member.expiry %></h3>
 
+<form action="/members/<%= @member.id %>/edit" method="get">
+<button>Edit Membership</button>
+</form>
+
 <form action="/members/<%= @member.id %>/delete" method="post">
-<button>Delete Member</button>
+<button>Delete Membership</button>
+</form>

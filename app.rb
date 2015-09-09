@@ -36,23 +36,21 @@ class Membership < Sinatra::Base
 
   #SHOW
   get '/members/:id' do
-    @member = Member.find(params[:id]) # or maybe @member = Member.find(:id)
+    @member = Member.find(params[:id]) 
     erb :show
   end
 
   #EDIT
   get '/members/:id/edit' do
-    # @member = Member.find(params[:id])
-    # Not needed we don't need a page for this exercise.
+    @member = Member.find(params[:id])
+    erb :edit
   end
 
   #UPDATE
-  put '/members/:id' do
-    #IRL: changes = {sauce: params[:sauce]}
-    changes = {sauce: "Pomodoro"}
+  post '/members/:id' do
     @member = Member.find(params[:id]) 
-    @member = @member.update(changes)
-    # @member.save < not needed with update.
+    @member.update(params)
+      redirect to "/members/#{@member.id}"    
   end
 
   #DELETE

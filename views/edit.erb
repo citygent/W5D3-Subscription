@@ -1,0 +1,14 @@
+<h2>Edit Membership</h2>
+
+<form action="/members/<%= @member.id%>" method="post">
+  <label for="name">Name:</label>
+  <input name="name" type="text" value="<%= @member.name%>">
+
+  <label for="email">E-Mail Address:</label>
+  <input name="email" type="email" value="<%= @member.email%>">
+
+  <label for="expiry">Expires On...</label>
+  <input name="expiry" type="date" value="<%= @member.expiry%>">
+
+  <input type="submit">
+</form>
