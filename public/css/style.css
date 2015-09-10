@@ -24,3 +24,12 @@ header nav ul {
   height: 60px;
   line-height: 60px;
 }
+
+li {
+  display: inline;
+  color: white;
+}
+
+li a {
+  color: white;
+}
